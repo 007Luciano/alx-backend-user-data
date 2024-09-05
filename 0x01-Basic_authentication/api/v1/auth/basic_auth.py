@@ -101,7 +101,9 @@ class BasicAuth(Auth):
         if not decoded_header:
             return None
 
-        user_email, user_password = self.extract_user_credentials(decoded_header)
+        user_email, user_password = self.extract_user_credentials(
+            decoded_header
+        )
         if not user_email or not user_password:
             return None
 
